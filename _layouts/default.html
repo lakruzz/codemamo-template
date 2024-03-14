@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body{% if page.categories %} class="{{ page.categories | join: ' ' }}"{% endif %}>
+    {% include header.html %}
+    {% include nav.html %}
+
+    <div class="main-area">
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
